@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zentria-flow"
+version = "0.1.0"
+description = "Free US import duty lookups by HTS code and country of origin: every tariff layer (MFN, Section 301, forced-labor tariff, Section 232, Section 338), dated changes, HTS search."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Zentria Flow, Inc.", email = "support@zentriaflow.com" }]
+keywords = ["tariff", "hts", "htsus", "customs", "import-duty", "section-301", "section-232", "landed-cost", "trade", "usmca"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Office/Business",
+  "Topic :: Office/Business :: Financial",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://zentriaflow.com/developers"
+Documentation = "https://github.com/orhansavash/zentria-flow-python#readme"
+Source = "https://github.com/orhansavash/zentria-flow-python"
+"Tariff calendar" = "https://zentriaflow.com/us-tariff-changes-calendar"
+
+[project.scripts]
+zentria-flow = "zentriaflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+zentriaflow = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
