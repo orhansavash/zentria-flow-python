@@ -7,7 +7,7 @@ name = "zentria-flow"
 version = "0.1.0"
 description = "Free US import duty lookups by HTS code and country of origin: every tariff layer (MFN, Section 301, forced-labor tariff, Section 232, Section 338), dated changes, HTS search."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Zentria Flow, Inc.", email = "support@zentriaflow.com" }]
